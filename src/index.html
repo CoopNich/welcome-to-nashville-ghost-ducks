@@ -14,31 +14,63 @@
     <h3>Search for stuff to do today
     </h3>
 
+    <!-- Search fields section -->
+
     <section class="parks">
 
-        <input type="text" id="park-search-criteria" placeholder="search parks by feature"/>
-        <button id="search-button">Search</button>
+        <label for="parks">Parks:</label>
+        <select id="park-search-criteria">
+            <option value="" disabled selected hidden>Search by Feature</option>
+            <option value="community_center">Community Center</option>
+            <option value="nature_center">Nature Center</option>
+            <option value="playground">Playground</option>
+            <option value="picnic_shelters">Picnic Shelters</option>
+            <option value="dog_park">Dog Park</option>
+            <option value="baseball_fields">Baseball Field</option>
+            <option value="basketball_courts">Basketball Courts</option>
+            <option value="volleyball">Volleyball</option>
+            <option value="soccer_fields">Soccer Fields</option>
+            <option value="football_multi_purpose_fields">Football Field</option>
+            <option value="tennis_courts">Tennis Courts</option>
+            <option value="disc_golf">Disc Golf</option>
+            <option value="skate_park">Skate Park</option>
+            <option value="swimming_pool">Swimming Pool</option>
+            <option value="spray_park">Spray Park</option>
+            <option value="golf_course">Golf Course</option>
+            <option value="walk_jog_paths">Walking/Jogging Paths</option>
+            <option value="hiking_trails">Hiking Trails</option>
+            <option value="horse_trails">Horse Trails</option>
+            <option value="mountain_bike_trails">Mountain Bike Trails</option>
+            <option value="boat_launch">Boat Launch</option>
+            <option value="camping_available_by_permit">Camping</option>
+            <option value="fishing_by_permit">Fishing</option>
+            <option value="lake">Lake</option>
+            <option value="canoe_launch">Canoe Launch</option>
+            <option value="community_garden">Community_garden</option>
+            <option value="historic_features">Historic Features</option>
+        </select>
+        <button id="park-search-button">Search</button>
 
     </section>
 
     <section class="art">
 
         <input type="text" id="art-search-criteria"/>
-        <button id="search-button">Search</button>
+        <button id="art-search-button">Search</button>
 
     </section>
 
     <secion class="restaurants">
 
         <input type="text" id="restaurant-search-criteria"/>
-        <button id="search-button">Search</button>
+        <button id="restaurant-search-button">Search</button>
 
     </secion>
 
     <section class="concerts">
 
         <input type="text" id="concert-search-criteria"/>
-        <button id="search-button">Search</button>
+        <button id="consert-search-button">Search</button>
 
     </section>
 
