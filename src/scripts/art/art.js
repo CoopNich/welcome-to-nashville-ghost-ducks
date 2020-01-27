@@ -1,5 +1,6 @@
 const getArt = () => {
-    const artURL = "https://data.nashville.gov/resource/eviu-nxp6.json"
+    const baseURL = "https://data.nashville.gov/resource/eviu-nxp6.json"
+    const artURL = baseURL + ``
     fetch(artURL)
         .then(resp => resp.json())
         .then(parsedArt => {
@@ -7,12 +8,19 @@ const getArt = () => {
         });
 }
 
+const searchEventManager = {
 
-let search = document.getElementById("art__button")
-search.addEventListener("click", function (event) {
-
-})
-
+    addSearchClickEventListener() {
+        console.log("add search click event test")
+        const search = document.getElementById("art__button")
+        search.addEventListener("click", () => {
+            console.log("button clicked")
+            const input = document.getElementById("art__input")
+            const searchCriteria = input.value 
+            const searchResultPromise = getArt
+        })
+    }
+}
 
 const artFactory = (art) => {
     if (!art.first_name) {
