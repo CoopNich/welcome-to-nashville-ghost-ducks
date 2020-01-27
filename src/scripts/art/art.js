@@ -23,7 +23,16 @@ const artFactory = (art) => {
         art.last_name = ""
     }
 
-    return `
+    if (!art.description) {
+        return `
+        <section class="artResults">
+        <div><strong>Art Piece:</strong> ${art.artwork}</div>
+        <div><strong>Artist:</strong> ${art.first_name} ${art.last_name}</div>
+        <div><strong>Location:</strong> ${art.location}</div>
+        </section>
+        `
+    } else {
+        return `
     <section class="artResults">
     <div><strong>Art Piece:</strong> ${art.artwork}</div>
     <div><strong>Artist:</strong> ${art.first_name} ${art.last_name}</div>
@@ -31,6 +40,7 @@ const artFactory = (art) => {
     <div><strong>Description:</strong> ${art.description}</div>
     </section>
     `
+    }
 }
 
 
@@ -42,4 +52,4 @@ const renderArt = (art) => {
     containter.innerHTML += artHtml;
     });
 }
-// getArt();
+getArt();
