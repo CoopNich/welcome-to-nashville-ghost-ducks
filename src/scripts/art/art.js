@@ -1,4 +1,4 @@
-const getParks = () => {
+const getArt = () => {
     const artURL = "https://data.nashville.gov/resource/eviu-nxp6.json"
     fetch(artURL)
         .then(resp => resp.json())
@@ -27,6 +27,7 @@ const artFactory = (art) => {
     <section class="artResults">
     <div><strong>Art Piece:</strong> ${art.artwork}</div>
     <div><strong>Artist:</strong> ${art.first_name} ${art.last_name}</div>
+    <div><strong>Location:</strong> ${art.location}</div>
     <div><strong>Description:</strong> ${art.description}</div>
     </section>
     `
@@ -41,4 +42,4 @@ const renderArt = (art) => {
     containter.innerHTML += artHtml;
     });
 }
-// getParks();
+// getArt();
