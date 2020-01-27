@@ -9,13 +9,20 @@ const parksApiManager = {
 };
 
 const parksResultsDomManager = {
+
+
     parksFactory(park) {
+        const address = park.mapped_location.human_address.split("\"")
         return `
         <div class="park">
-            <h3>Park Name: ${park.park_name}</h3>
-            <p>Address: ${park.mapped_location.human_address}</p>
-            <p>ADA Accessible: ${park.ada_accessible}</p>
-            <p>Restrooms Available: ${park.restrooms_available}</p>
+            <h1>${park.park_name}</h1>
+            <h3>Address: ${address[3]}</h3>
+            <p>ADA Accessible:
+             ${park.ada_accessible}
+             </p>
+            <p>Restrooms Available:
+             ${park.restrooms_available}
+             </p>
         </div>
         `;
     },
