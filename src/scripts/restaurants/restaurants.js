@@ -2,11 +2,11 @@
 const restaurantsAPIManager = {
     searchRestaurants(restaurantCuisine) {
         const apiURL = `https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&q=${restaurantCuisine}&cuisines=${restaurantCuisine}&apikey=${restaurantsAPIKey}`;
-    //    console.log(apiURL)
+        // console.log(apiURL)
         return fetch(apiURL)
             .then(resp => resp.json())
     }
-    
+
 };
 
 const restaurantResultsDomManager = {
@@ -18,15 +18,25 @@ const restaurantResultsDomManager = {
         </div>
         `;
     },
+    emptyFactory() {
+        return `
+        <div class="restaurant">
+            <h3> No Results Found </h3>
+        </div>
+        `;
+    },
     renderRestaurantResults(restaurantsResponse) {
-        // console.log(restaurants)
+        console.log(restaurantsResponse)
         const restaurants = restaurantsResponse.restaurants
         const container = document.querySelector(".searchResults");
         container.innerHTML = "";
-        for (let i=0; i<restaurants.length; i++) {
+        if (restaurantsResponse.results_found === 0) {container.innerHTML = this.emptyFactory() };
+        for (let i = 0; i < restaurants.length; i++) {
             // restauraunts[i] represents current restaurant in the array being looped over
             // the following line plugs the current restaurant into the HTML factory and renders it to the DOM in the .searchResults container
-            container.innerHTML += this.restaurantFactory(restaurants[i]);}
+          
+                container.innerHTML += this.restaurantFactory(restaurants[i])
+        }
     }
 }
 
