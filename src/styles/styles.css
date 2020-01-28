@@ -1,0 +1,15 @@
+.featuresSelection {
+    display: flex;
+    flex-direction: column;
+    height: 175px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    }
+
+.park_button {
+    margin-bottom: 10px;
+}
+
+div {
+    margin-right: 20px;
+}
