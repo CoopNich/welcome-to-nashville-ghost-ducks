@@ -20,3 +20,25 @@ input {
     float: left;
 }
 
+
+.artResults {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.artResults__button {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    /* justify-items: center;
+    justify-self: center;
+    align-items: center;
+    align-content: center; */
+    align-self: center;
+}
+
+hr {
+    width: 100%;
+}
