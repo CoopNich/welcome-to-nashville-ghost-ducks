@@ -9,7 +9,7 @@ const concertResultsDomManager = {
     concertFactory(concert, iNum) {
         return `
         <div class="concert">
-            <p>${iNum}. ${concert.name} is playing at ${concert[`_embedded`].venues[0].name}</p>
+            <p>${iNum}. ${concert.name} is playing at ${concert[`_embedded`].venues[0].name} on ${concert.dates.start.localDate}</p>
         </div>
         `;
     },
@@ -31,8 +31,8 @@ const concertResultManager = {
             const concertFeature = input.value;
             const concertPromise = concertApiManager.searchNashville();
             concertPromise.then(feature => {
-                console.log(feature[`_embedded`].events)
                 for (let i = 0; i < feature[`_embedded`].events.length; i++) {
+                    console.log(feature[`_embedded`].events[i].classifications[0].genre.name)
                     if (feature[`_embedded`].events[i].classifications[0].genre.name.toUpperCase() == concertFeature.toUpperCase()) {
                         matching.push(feature[`_embedded`].events[i])
                     }
