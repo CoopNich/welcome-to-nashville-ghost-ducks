@@ -18,38 +18,180 @@
 
     <section class="parks">
 
-        <label for="parks">Parks:</label>
-        <select id="park-search-criteria">
-            <option value="" disabled selected hidden>Search by Feature</option>
-            <option value="community_center">Community Center</option>
-            <option value="nature_center">Nature Center</option>
-            <option value="playground">Playground</option>
-            <option value="picnic_shelters">Picnic Shelters</option>
-            <option value="dog_park">Dog Park</option>
-            <option value="baseball_fields">Baseball Field</option>
-            <option value="basketball_courts">Basketball Courts</option>
-            <option value="volleyball">Volleyball</option>
-            <option value="soccer_fields">Soccer Fields</option>
-            <option value="football_multi_purpose_fields">Football Field</option>
-            <option value="tennis_courts">Tennis Courts</option>
-            <option value="disc_golf">Disc Golf</option>
-            <option value="skate_park">Skate Park</option>
-            <option value="swimming_pool">Swimming Pool</option>
-            <option value="spray_park">Spray Park</option>
-            <option value="golf_course">Golf Course</option>
-            <option value="walk_jog_paths">Walking/Jogging Paths</option>
-            <option value="hiking_trails">Hiking Trails</option>
-            <option value="horse_trails">Horse Trails</option>
-            <option value="mountain_bike_trails">Mountain Bike Trails</option>
-            <option value="boat_launch">Boat Launch</option>
-            <option value="camping_available_by_permit">Camping</option>
-            <option value="fishing_by_permit">Fishing</option>
-            <option value="lake">Lake</option>
-            <option value="canoe_launch">Canoe Launch</option>
-            <option value="community_garden">Community_garden</option>
-            <option value="historic_features">Historic Features</option>
-        </select>
-        <button id="park-search-button">Search</button>
+        <section class="parks_header">
+            <h4>Search parks by features:</h4>
+        </section>
+
+        <section class="featuresSelection">
+
+            <div class="selection">
+                <label for="community_center">Community Center</label>
+                <input id="community_center" type="checkbox" value="community_center" name="feature">
+            </div>
+
+            <div class="selection">
+                <label for="nature_center">Nature Center</label>
+                <input id="nature_center" type="checkbox" value="nature_center" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="playground">Playground</label>
+                <input id="playground" type="checkbox" value="playground" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="picnic_shelters">Picnic Shelters</label>
+                <input id="picnic_shelters" type="checkbox" value="picnic_shelters" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="dog_park">Dog Park</label>
+                <input id="dog_park" type="checkbox" value="dog_park" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="baseball_fields">Baseball Fields</label>
+                <input id="baseball_fields" type="checkbox" value="baseball_fields" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="basketball_courts">Basketball Courts</label>
+                <input id="basketball_courts" type="checkbox" value="basketball_courts" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="volleyball">Volleyball</label>
+                <input id="volleyball" type="checkbox" value="volleyball" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="soccer_fields">Soccer Fields</label>
+                <input id="soccer_fields" type="checkbox" value="soccer_fields" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="football_multi_purpose_fields">Football Field</label>
+                <input id="football_multi_purpose_fields" type="checkbox" value="football_multi_purpose_fields"
+                    name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="tennis_courts">Tennis Courts</label>
+                <input id="tennis_courts" type="checkbox" value="tennis_courts" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="disc_golf">Disc Golf</label>
+                <input id="disc_golf" type="checkbox" value="disc_golf" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="skate_park">Skate Park</label>
+                <input id="skate_park" type="checkbox" value="skate_park" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="swimming_pool">Swimming Pool</label>
+                <input id="swimming_pool" type="checkbox" value="swimming_pool" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="spray_park">Spray Park</label>
+                <input id="spray_park" type="checkbox" value="spray_park" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="golf_course">Golf Course</label>
+                <input id="golf_course" type="checkbox" value="golf_course" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="walk_jog_paths">Walking/Jogging Paths</label>
+                <input id="walk_jog_paths" type="checkbox" value="walk_jog_paths" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="hiking_trails">Hiking Trails</label>
+                <input id="hiking_trails" type="checkbox" value="hiking_trails" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="horse_trails">Horse Trails</label>
+                <input id="horse_trails" type="checkbox" value="horse_trails" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="mountain_bike_trails">Mountain Bike Trails</label>
+                <input id="mountain_bike_trails" type="checkbox" value="mountain_bike_trails" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="boat_launch">Boat Launch</label>
+                <input id="boat_launch" type="checkbox" value="boat_launch" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="camping_available_by_permit">Camping</label>
+                <input id="camping_available_by_permit" type="checkbox" value="camping_available_by_permit"
+                    name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="fishing_by_permit">Fishing</label>
+                <input id="fishing_by_permit" type="checkbox" value="fishing_by_permit" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="lake">Lake</label>
+                <input id="lake" type="checkbox" value="lake" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="canoe_launch">Canoe Launch</label>
+                <input id="volleyball" type="checkbox" value="volleyball" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="community_garden">Community Garden</label>
+                <input id="community_garden" type="checkbox" value="community_garden" name="feature">
+            </div>
+
+
+            <div class="selection">
+                <label for="historic_features">Historic Features</label>
+                <input id="historic_features" type="checkbox" value="historic_features" name="feature">
+            </div>
+
+        </section>
+
+        <section class="park_button">
+            <button id="park-search-button">Search Parks</button>
+        </section>
+
 
     </section>
 
@@ -62,7 +204,7 @@
 
     <secion class="restaurants">
 
-        <input type="text" id="restaurant-search-criteria"/>
+        <input type="text" id="restaurant-search-criteria" />
         <button id="restaurant-search-button">Search</button>
 
     </secion>
@@ -77,14 +219,14 @@
     <!-- output sections -->
 
     <section class="searchResults">
-    
+
     </section>
 
     <section class="itinerary">
         <div class="itinerary__parks">
-    
+
         </div>
-    
+
         <div class="itinerary__art">
 
         </div>
