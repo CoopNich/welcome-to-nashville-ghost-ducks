@@ -12,14 +12,20 @@
     margin-bottom: 10px;
 }
 
-div {
+.selection {
     margin-right: 20px;
 }
 
-input {
+.selection input {
     float: left;
 }
 
+.park {
+    border-top: 1px solid gray;
+    margin-top: 10px;
+}
+
+/* Styling for art section */
 
 .artResults {
     margin: 5px;
