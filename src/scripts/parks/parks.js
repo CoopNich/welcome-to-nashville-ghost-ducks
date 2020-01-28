@@ -15,7 +15,7 @@ const parksApiManager = {
 const parksResultsDomManager = {
     parksFactory(park) {
         const address = park.mapped_location.human_address.split("\"")
-        if (parkArray > 0) {
+        if (parkArray !== 0) {
             return `
         <div class="park">
             <h1>${park.park_name}</h1>
@@ -42,8 +42,8 @@ const parksResultsDomManager = {
         const container = document.querySelector(".searchResults");
         container.innerHTML = "";
         feature.forEach(park => {
-            parkArray.push(park);
             // console.log(parkArray)
+            parkArray.push(park);
             container.innerHTML += this.parksFactory(park);
         });
     }
