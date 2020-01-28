@@ -12,11 +12,14 @@
     margin-bottom: 10px;
 }
 
-div {
+.selection {
     margin-right: 20px;
 }
 
-input {
+.selection input {
     float: left;
 }
 
+.park {
+    border-bottom: 1px solid gray;
+}
