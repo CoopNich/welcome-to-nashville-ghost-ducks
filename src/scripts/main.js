@@ -1,0 +1,2 @@
+concertResultManager.addSearchClickEventListener();
+concertResultManager.addClearClickEventListener();
