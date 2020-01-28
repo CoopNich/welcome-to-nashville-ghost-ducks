@@ -32,7 +32,6 @@ const concertResultManager = {
             const concertPromise = concertApiManager.searchNashville();
             concertPromise.then(feature => {
                 for (let i = 0; i < feature[`_embedded`].events.length; i++) {
-                    console.log(feature[`_embedded`].events[i].classifications[0].genre.name)
                     if (feature[`_embedded`].events[i].classifications[0].genre.name.toUpperCase() == concertFeature.toUpperCase()) {
                         matching.push(feature[`_embedded`].events[i])
                     }
