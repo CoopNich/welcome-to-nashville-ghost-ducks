@@ -22,6 +22,7 @@ const parksResultsDomManager = {
             <p>Restrooms Available:
              ${park.restrooms_available}
              </p>
+             <button id="save_park">Save Park</button>
         </div>
         `;
     },
