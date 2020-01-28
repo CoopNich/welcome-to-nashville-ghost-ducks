@@ -61,13 +61,10 @@ const searchResultsDomManager = {
 const searchEventManager = {
 
     addSearchClickEventListener() {
-        console.log("added search click event listener")
 
         const search = document.getElementById("art__button")
 
         search.addEventListener("click", () => {
-
-            console.log("button clicked")
 
             const input = document.getElementById("art__input")
             const searchCriteria = input.value 
@@ -75,6 +72,14 @@ const searchEventManager = {
             searchResultPromise.then(searchResults => {
                 searchResultsDomManager.renderArt(searchResults)
             });
+        });
+
+        const input = document.getElementById("art__input")
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("art__button").click();
+            };
         });
     }
 }
