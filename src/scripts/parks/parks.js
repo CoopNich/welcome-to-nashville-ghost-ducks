@@ -42,8 +42,9 @@ const parksResultsDomManager = {
         const container = document.querySelector(".searchResults");
         container.innerHTML = "";
         feature.forEach(park => {
-            container.innerHTML += this.parksFactory(park);
             parkArray.push(park);
+            // console.log(parkArray)
+            container.innerHTML += this.parksFactory(park);
         });
     }
 };
