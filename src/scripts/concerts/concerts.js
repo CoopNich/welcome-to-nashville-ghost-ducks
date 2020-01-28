@@ -1,37 +1,19 @@
-const concertApiManager = {
-    searchNashville() {
-        return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=343&apikey=${concertKey}`)
-            .then(response => response.json());
-    }
-};
-
-const concertResultsDomManager = {
-    concertFactory(concert, iNum) {
-        return `
-        <div class="concert">
-            <p>${iNum}. ${concert.name} is playing at ${concert[`_embedded`].venues[0].name} on ${concert.dates.start.localDate}</p>
-        </div>
-        `;
-    },
-    renderconcertResults(concerts) {
-        const container = document.querySelector(".searchResults");
-        container.innerHTML = "<h3>Concert Results:</h3>";
-        for (let i = 0; i < concerts.length; i++) {
-            container.innerHTML += this.concertFactory(concerts[i], (i+1));
-        };
-    }
-};
-
 const concertResultManager = {
     addSearchClickEventListener() {
         const button = document.getElementById("concert-search-button");
         button.addEventListener("click", () => {
+            //this is a special array of matching results that I can push to so that I can be choosier with my data used in methods
             let matching = []
             const input = document.getElementById("concert-search-criteria");
-            const concertFeature = input.value;
+            let concertFeature = input.value;
             const concertPromise = concertApiManager.searchNashville();
             concertPromise.then(feature => {
+                //since the api has hip-hop/rap as same genre this conditional makes searching for either easier and return a result
+                if (concertFeature.toLowerCase() == "rap" ||  concertFeature.toLowerCase() == `hip-hop`) {
+                    concertFeature = `Hip-Hop/Rap`
+                }
                 for (let i = 0; i < feature[`_embedded`].events.length; i++) {
+                    //checks if my input equals the genre listed in API
                     if (feature[`_embedded`].events[i].classifications[0].genre.name.toUpperCase() == concertFeature.toUpperCase()) {
                         matching.push(feature[`_embedded`].events[i])
                     }
@@ -39,7 +21,11 @@ const concertResultManager = {
                 }
             });
         });
+    },
+    addClearClickEventListener() {
+        const clearButton = document.getElementById("clear-search-button");
+        clearButton.addEventListener("click", () => {
+            concertResultsDomManager.clearSearchResults()
+        })
     }
 }
-
-concertResultManager.addSearchClickEventListener();
