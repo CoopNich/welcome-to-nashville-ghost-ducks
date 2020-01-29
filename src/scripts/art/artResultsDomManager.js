@@ -14,6 +14,7 @@ const searchResultsDomManager = {
             <h3>Art Piece</h3><p> ${art.artwork}</p>
             <h3>Artist</h3><p> ${art.first_name} ${art.last_name}</p>
             <h3>Location</h3><p> ${art.location}</p>
+            <h3><a target="_blank" href="${art.page_link.url}">More Info</h3>
             <button class="artResults__button">Save</button>
             <hr>
             </section>
@@ -25,6 +26,7 @@ const searchResultsDomManager = {
         <h3>Artist</h3><p class="artist"> ${art.first_name} ${art.last_name}</p>
         <h3>Location</h3><p class="location"> ${art.location}</p>
         <h3>Description</h3><p> ${art.description}</p>
+        <h3><a target="_blank" href="${art.page_link.url}">More Info</h3>
         <button class="artResults__button">Save</button>
         <hr>
         </section>
