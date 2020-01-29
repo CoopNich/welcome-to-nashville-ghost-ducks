@@ -5,7 +5,7 @@ const concertResultManager = {
             //this is a special array of matching results that I can push to so that I can be choosier with my data used in methods
             let matching = []
             const input = document.getElementById("concert-search-criteria");
-            let concertFeature = input.value;
+            let concertFeature = input.value.trim();
             const concertPromise = concertApiManager.searchNashville();
             concertPromise.then(feature => {
                 //since the api has hip-hop/rap as same genre this conditional makes searching for either easier and return a result
