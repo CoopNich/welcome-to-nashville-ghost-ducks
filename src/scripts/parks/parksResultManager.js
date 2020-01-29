@@ -16,7 +16,7 @@ const parksResultManager = {
             });
         });
 
-        const enter = document.querySelectorAll("input");
+        const enter = document.getElementsByClassName("checkbox");
         for (let i = 0; i < enter.length; i++) {
             enter[i].addEventListener("keyup", function(event) {
                 if (event.keyCode === 13) {
