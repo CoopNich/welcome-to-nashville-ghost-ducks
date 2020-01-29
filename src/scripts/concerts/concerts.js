@@ -15,6 +15,7 @@ const concertResultManager = {
                 for (let i = 0; i < feature[`_embedded`].events.length; i++) {
                     //checks if my input equals the genre listed in API
                     if (feature[`_embedded`].events[i].classifications[0].genre.name.toUpperCase() == concertFeature.toUpperCase()) {
+                        //push only confirmed matches into the array to zero in on data I want
                         matching.push(feature[`_embedded`].events[i])
                     }
                     concertResultsDomManager.renderconcertResults(matching)
@@ -22,6 +23,7 @@ const concertResultManager = {
             });
         });
     },
+    //method to clear all search results
     addClearClickEventListener() {
         const clearButton = document.getElementById("clear-search-button");
         clearButton.addEventListener("click", () => {
