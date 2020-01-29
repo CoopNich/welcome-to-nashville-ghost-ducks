@@ -6,14 +6,61 @@
 }
 
 body {
-    margin: 1%;
+    margin: 5%;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pageHead {
+    margin-bottom: 5%;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
 }
 
 h3 {
-    margin-top: 1%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-transform: uppercase;
+}
+
+.searchFields {
+    background-color: gainsboro;
+    padding: 2%;
+}
+
+.searchFields button {
+    padding: 3px;
     margin-bottom: 1%;
 }
 
+.art input {
+    width: 150px;
+    line-height: 1.5em;
+}
+
+.restaurants input {
+    width: 150px;
+    line-height: 1.5em;
+}
+
+.concerts input {
+    width: 150px;
+    line-height: 1.5em;
+}
+
+.parks {
+    line-height: 1.5em;
+}
+
+.parks p {
+    margin-bottom: 1%;
+}
 /* Styling for itinerary */
 
 .itinerary {
@@ -38,7 +85,8 @@ h3 {
 }
 
 .selection {
-    margin-right: 20px;
+    display: flex;
+    
 }
 
 .selection input {
