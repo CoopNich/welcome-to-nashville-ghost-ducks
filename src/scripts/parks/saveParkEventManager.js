@@ -2,18 +2,18 @@ const saveParkEventHandler = (event) => {
     const parkButtonId = event.target.id;
     const index = parkButtonId.split('-')[1];
 
+    const parkItinerary = document.querySelector(".itinerary__parks");
+
     const parkName = document.getElementById(`park_name-${index}`);
     const parkAddress = document.getElementById(`park_address-${index}`);
-    const parkAdaAccess = document.getElementById(`park_ada_access-${index}`);
-    const parkRestrooms = document.getElementById(`park_restrooms-${index}`);
-
-    // need to add alert here
-
-    const parkSection = document.getElementById(`park-${index}`);
-    parkSection.classList.add('saved_park');
+    const parkNameText = parkName.textContent;
+    const parkAddressText = parkAddress.textContent;
+    const actualParkAddressText = parkAddressText.split(':')[1];
+    parkItinerary.innerHTML = `<strong>Park: </strong>${parkNameText} <br> ${actualParkAddressText}`;
+    parksResultsDomManager.clearSearchResults();
 };
 
-const saveParksEventManager = {
+const saveParkEventManager = {
     addSaveParkEventListeners() {
         const parkButtons = document.querySelectorAll(".park-save_park");
         for (let parkButton of parkButtons) {
