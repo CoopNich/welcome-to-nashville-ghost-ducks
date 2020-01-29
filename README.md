@@ -9,14 +9,14 @@ Users can search for parks, public art collections, restaurants, and concerts in
 2. Select 'Clone or Download' in GitHub Repo
     
     ex.
-     ```
-    -> ~ https://github.com/nss-day-cohort-38/welcome-to-nashville-ghost-ducks.git
+     ```shell session
+    $ https://github.com/nss-day-cohort-38/welcome-to-nashville-ghost-ducks.git
 
      ```
 3. Create an api file 'apikeys.js' in the 'scripts' directory
-    ```
-    -> cd ../welcome-to-nashville-ghost-ducks/src/scripts
-    -> touch apikeys.js
+    ```shell session  
+    $ cd ../welcome-to-nashville-ghost-ducks/src/scripts
+    $ touch apikeys.js
     ```
     1. Find API key for Zomato
         * Visit [Zomato's API](developers.zomato.com/api) to request and obtain an API key
@@ -28,19 +28,26 @@ Users can search for parks, public art collections, restaurants, and concerts in
 
 4. cd to src directory in your terminal
 5. hs -o
-6. USING THE APP
+***
+## USING THE APP
 
-* Parks Functionality
+### Parks Functionality
 
-* Art Functionality
+To search for parks, select desired feature(s) and then hit enter on your keyboard or click the 'search parks' button. 
 
-     Use partial or exact search queries and either hit the ENTER key or click 'Search' to generate search results based on an artist's last name.
+If you want to get a list of all parks, just click the 'search parks' button without selecting any specific features.
 
-     Click 'Save' to add an art installation to your itinerary.
+### Art Functionality
 
-* Restaurant Functionality
+Use partial or exact search queries and either hit the ENTER key or click 'Search' to generate search results based on an artist's last name.
 
-* Concert Functionality
+You can generate a full list of public art installations by clicking 'Search' without a search query.
+
+Click 'Save' to add an art installation to your itinerary.
+
+### Restaurant Functionality
+
+### Concert Functionality
 
 *****
 
