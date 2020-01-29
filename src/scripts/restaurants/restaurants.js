@@ -12,9 +12,10 @@ const restaurantsAPIManager = {
 const restaurantResultsDomManager = {
     restaurantFactory(restaurant) {
         return `
-        <div class="restaurant">
+        <div class="restaurant_results">
             <h3> Name: ${restaurant.restaurant.name}</h3>
             <p>Address: ${restaurant.restaurant.location.address}</p>
+            <button id="save_restaurant">Save</button>
         </div>
         `;
     },
