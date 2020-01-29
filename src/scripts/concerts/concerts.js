@@ -18,7 +18,9 @@ const concertResultManager = {
                         //push only confirmed matches into the array to zero in on data I want
                         matching.push(feature[`_embedded`].events[i])
                     }
+                    if (concertFeature.toLowerCase() == "help") {concertResultsDomManager.helpSearch()} else {
                     concertResultsDomManager.renderconcertResults(matching)
+                    }
                 }
             });
         });

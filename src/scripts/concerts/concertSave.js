@@ -1,4 +1,4 @@
-const saveEventHandler = (evt) => {
+const saveConcertEventHandler = (evt) => {
     const buttonId = evt.target.id;
     const index = buttonId.split('-')[1];
     const itinerary = document.querySelector(".itinerary__concerts")
@@ -9,17 +9,17 @@ const saveEventHandler = (evt) => {
     concertResultsDomManager.clearSearchResults();
 };
 
-const saveEventManager = {
+const saveConcertEventManager = {
     addSaveEventListeners() {
         const buttons = document.querySelectorAll(".saveConcert");
         for (let button of buttons) {
-            button.addEventListener("click", saveEventHandler);
+            button.addEventListener("click", saveConcertEventHandler);
         }
     },
     removeSaveEventListeners() {
         const buttons = document.querySelectorAll(".saveConcert");
         for (let button of buttons) {
-            button.removeEventListener("click", saveEventHandler);
+            button.removeEventListener("click", saveConcertEventHandler);
         }
     }
 }
