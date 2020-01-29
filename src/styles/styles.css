@@ -1,3 +1,18 @@
+/* page styles */
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+/* Styling for itinerary */
+
+.itinerary {
+    border: 1px solid black;
+    margin-top: 3%;
+    padding-left: 5%;
+}
+
+
 /* Styling for park search */
 
 .featuresSelection {
@@ -48,10 +63,6 @@ input {
     display: flex;
     justify-content: center;
     width: fit-content;
-    /* justify-items: center;
-    justify-self: center;
-    align-items: center;
-    align-content: center; */
     align-self: center;
 }
 
@@ -59,8 +70,6 @@ hr {
     width: 100%;
 }
 
+
 /* Styling for concert section */
 
-.itinerary {
-    margin-top: 30px;
-}
