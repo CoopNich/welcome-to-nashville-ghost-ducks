@@ -29,6 +29,12 @@ input {
     margin-top: 10px;
 }
 
+.park-save_park{
+    background-color: lightblue;
+    font-weight: bold;
+    border: 1px solid rgb(20, 77, 131);
+}
+
 /* Styling for art section */
 
 .artResults {
