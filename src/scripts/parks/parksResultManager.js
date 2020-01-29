@@ -15,5 +15,16 @@ const parksResultManager = {
                 parksResultsDomManager.renderParksResults(searchResults);
             });
         });
+
+        const enter = document.querySelectorAll("input");
+        for (let i = 0; i < enter.length; i++) {
+            enter[i].addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("park-search-button").click();
+                };
+            });
+        };
+        
     }
 }
