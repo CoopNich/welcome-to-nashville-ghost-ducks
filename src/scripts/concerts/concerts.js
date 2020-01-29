@@ -25,6 +25,14 @@ const concertResultManager = {
                 }
             });
         });
+
+        const input = document.getElementById("concert-search-criteria")
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("concert-search-button").click();
+            };
+        });
     },
     //method to clear all search results
     addClearClickEventListener() {
