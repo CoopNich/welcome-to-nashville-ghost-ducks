@@ -10,6 +10,7 @@ const parksResultManager = {
             for (let i = 0; i < checkboxes.length; i++) {
                 featuresSelected.push(checkboxes[i].value);
             }
+            
             const parkSearchPromise = parksApiManager.searchParks(featuresSelected);
             parkSearchPromise.then(searchResults => {
                 parksResultsDomManager.renderParksResults(searchResults);
