@@ -1,6 +1,6 @@
 BASIC README FRAMEWORK
 
-1. Install [http-server] (https://www.npmjs.com/package/http-server)
+1. Install [http-server](https://www.npmjs.com/package/http-server)
 2. clone/download
 3. create api file 'apikeys.js'
     -find api keys for zomato & ticketmaster
