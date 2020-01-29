@@ -35,7 +35,8 @@ const searchResultsDomManager = {
 
         const containter = document.querySelector(".searchResults");
         containter.innerHTML = "";
-
+        const input = document.getElementById("art__input");
+        input.value = "";
         // for (let i = 0; i < searchResults.length; i++) {
         //     const artHtml = this.artFactory(searchResults[i]);
         //     containter.innerHTML += artHtml
@@ -45,6 +46,10 @@ const searchResultsDomManager = {
         const artHtml = this.artFactory(art);
         containter.innerHTML += artHtml;
         });
+
+        if (searchResults.length === 0) {
+            
+        }
 
         artSaveEventManager.addSaveClickEventListener()
     }
