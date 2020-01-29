@@ -35,9 +35,9 @@ const searchResultsDomManager = {
         } else {
             return `
         <section class="artResults">
-        <h3>Art Piece</h3><p id="art"> ${art.artwork}</p>
-        <h3>Artist</h3><p id="artist"> ${art.first_name} ${art.last_name}</p>
-        <h3>Location</h3><p> ${art.location}</p>
+        <h3>Art Piece</h3><p class="art"> ${art.artwork}</p>
+        <h3>Artist</h3><p class="artist"> ${art.first_name} ${art.last_name}</p>
+        <h3>Location</h3><p class="location"> ${art.location}</p>
         <h3>Description</h3><p> ${art.description}</p>
         <button class="artResults__button">Save</button>
         <hr>
@@ -46,6 +46,7 @@ const searchResultsDomManager = {
         }
     },
     renderArt(searchResults) {
+
         const containter = document.querySelector(".searchResults");
         containter.innerHTML = "";
 
@@ -59,7 +60,7 @@ const searchResultsDomManager = {
         containter.innerHTML += artHtml;
         });
 
-        saveEventManager.addSaveClickEventListener()
+        artSaveEventManager.addSaveClickEventListener()
     }
 
 }
@@ -102,7 +103,7 @@ searchEventManager.addSearchClickEventListener()
 //render content to DOM (itinerary__art div)
 
 
-const saveEventManager = {
+const artSaveEventManager = {
     // renderItinerary() {
     //     return ``
     // }
@@ -110,17 +111,25 @@ const saveEventManager = {
     addSaveClickEventListener() {
         
         const save = document.querySelectorAll(".artResults__button")
-        // const artwork = document.getElementById("art").innerText
-        // const artist = document.getElementById("artist").innerText
 
         for (let i=0; i < save.length; i++) {
             let button = save[i]
             const resultSectionContent = button.parentNode
+            
+            const artwork = resultSectionContent.querySelector(".art")
+            const artist = resultSectionContent.querySelector(".artist")
+            const location = resultSectionContent.querySelector(".location")
+
+            const artworkText = artwork.textContent
+            const artistText = artist.textContent
+            const locationText = location.textContent
+
             const itineraryDivContent = document.getElementById("itinerary__art")
             button.addEventListener("click", () => {
-                    itineraryDivContent.innerHTML = resultSectionContent.innerHTML
-                    
-                    // `<p>I'm going to see ${artwork} by ${artist} today!</p>`
+                    itineraryDivContent.innerHTML = 
+                    `<span><strong>Piece:</strong> ${artworkText}</span><br> 
+                    <span><strong>Artist:</strong> ${artistText}</span><br>
+                    <span><strong>Location:</strong> ${locationText}</span>`
             })
         }
     }
