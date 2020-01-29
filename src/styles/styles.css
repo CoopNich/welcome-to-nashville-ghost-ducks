@@ -20,6 +20,10 @@
     float: left;
 }
 
+input {
+    float: left;
+}
+
 .park {
     border-top: 1px solid gray;
     margin-top: 10px;
@@ -45,6 +49,13 @@ hr {
     width: 100%;
 }
 
+<<<<<<< HEAD
 #itinerary__art {
     border: 1px solid blueviolet;
+=======
+/* Styling for concert section */
+
+.itinerary {
+    margin-top: 30px;
+>>>>>>> master
 }
