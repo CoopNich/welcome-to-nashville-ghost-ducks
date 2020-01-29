@@ -7,6 +7,7 @@ const restaurantResultManager = {
             const restaurantSearchPromise = restaurantsAPIManager.searchRestaurants(restaurantCuisine);
             restaurantSearchPromise.then(cuisine => {
                 restaurantResultsDomManager.renderRestaurantResults(cuisine);
+                 input.value = ""
             });
         });
     }
