@@ -44,3 +44,7 @@
 hr {
     width: 100%;
 }
+
+#itinerary__art {
+    border: 1px solid blueviolet;
+}
