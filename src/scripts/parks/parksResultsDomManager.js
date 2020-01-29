@@ -1,8 +1,8 @@
 const parksResultsDomManager = {
-    featuresFactory(object, value) {
-        return park.keys(object).find(key => object[key]=== value);
-    },
     parksFactory(park, index) {
+        // featuresFactory(object, value) {
+        //     return park.keys(object).find(key => object[key]=== value);
+        // },
         const address = park.mapped_location.human_address.split("\"")
         return `
         <div id="park-${index}" class="park">
@@ -57,7 +57,7 @@ const parksResultsDomManager = {
     }
 };
 
-parksResultsDomManager.featuresFactory('Yes');
+// parksResultsDomManager.featuresFactory('Yes');
 
 
 
