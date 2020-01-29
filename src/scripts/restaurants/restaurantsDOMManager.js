@@ -1,10 +1,33 @@
+const saveEventHandler = (evt) => {
+    const buttonId = evt.target.id;
+    const index = buttonId.split('-')[1];
+    const itinerary = document.querySelector(".itinerary__restaurants")
+    const targetRestaurant = document.getElementById(`retaurantText-${index}`);
+    const restaurantText = targetRestaurant.textContent;
+};
+const saveEventManager = {
+    addSaveEventListeners() {
+        const buttons = document.querySelectorAll(".saveRestaurant");
+        for (let button of buttons) {
+            button.addEventListener("click", saveEventHandler);
+        }
+    },
+    removeSaveEventListeners() {
+        const buttons = document.querySelectorAll(".saveRestaurant");
+        for (let button of buttons) {
+            button.removeEventListener("click", saveEventHandler);
+        }
+    }
+}
+
+
 const restaurantResultsDomManager = {
-    restaurantFactory(restaurant, iNum) {
+    restaurantFactory(restaurant, index) {
         return `
         <div class="restaurant_results">
-            <h3> Name: ${restaurant.restaurant.name}</h3>
-            <p>Address: ${restaurant.restaurant.location.address}</p>
-            <button id="save_restaurant">Save</button>
+            <h3 id="restaurant_text-${index}>Name: ${restaurant.restaurant.name}</h3>
+            <p id="restaurant_text-${index}>Address: ${restaurant.restaurant.location.address}</p>
+            <button id="save_restaurant-${index}">Save</button>
         </div>
         `;
     },
