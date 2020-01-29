@@ -9,13 +9,13 @@ const saveRestaurantEventHandler = (event) => {
     const restaurantNameText = restaurantName.textContent;
     const restaurantAddressText = restaurantAddress.textContent;
     const actualRestaurantAddressText = restaurantAddressText.split(':')[1];
-    restaurantItinerary.innerHTML = `<strong>Park: </strong>${restaurantNameText} <br> ${actualRestaurantAddressText}`;
-    parksResultsDomManager.clearSearchResults();
+    restaurantItinerary.innerHTML = `<strong>Restaurant:</strong>${restaurantNameText} <br> ${actualRestaurantAddressText}`;
+    restaurantResultsDomManager.clearSearchResults();
 };
 
 const saveRestaurantEventManager = {
     addSaveRestaurantEventListeners() {
-        const restaurantButtons = document.querySelectorAll(".restaurant-save_park");
+        const restaurantButtons = document.querySelectorAll(".restaurant-save_restaurant");
         for (let restaurantButton of restaurantButtons) {
             restaurantButton.addEventListener("click", saveRestaurantEventHandler);
         }
