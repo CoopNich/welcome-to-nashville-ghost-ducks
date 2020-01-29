@@ -1,4 +1,7 @@
 const parksResultsDomManager = {
+    featuresFactory(object, value) {
+        return park.keys(object).find(key => object[key]=== value);
+    },
     parksFactory(park, index) {
         const address = park.mapped_location.human_address.split("\"")
         return `
@@ -47,12 +50,14 @@ const parksResultsDomManager = {
 
         saveParkEventManager.addSaveParkEventListeners();
     },
+
     clearSearchResults() {
         const container = document.querySelector(".searchResults");
         container.innerHTML = " ";
     }
 };
 
+parksResultsDomManager.featuresFactory('Yes');
 
 
 
