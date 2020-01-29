@@ -39,28 +39,8 @@ h3 {
     margin-bottom: 1%;
 }
 
-.art input {
-    width: 150px;
-    line-height: 1.5em;
-}
 
-.restaurants input {
-    width: 150px;
-    line-height: 1.5em;
-}
 
-.concerts input {
-    width: 150px;
-    line-height: 1.5em;
-}
-
-.parks {
-    line-height: 1.5em;
-}
-
-.parks p {
-    margin-bottom: 1%;
-}
 /* Styling for itinerary */
 
 .itinerary {
@@ -71,6 +51,14 @@ h3 {
 
 
 /* Styling for park search */
+
+.parks {
+    line-height: 1.5em;
+}
+
+.parks p {
+    margin-bottom: 1%;
+}
 
 .featuresSelection {
     display: flex;
@@ -86,7 +74,10 @@ h3 {
 
 .selection {
     display: flex;
-    
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
 .selection input {
@@ -95,6 +86,10 @@ h3 {
 
 input {
     float: left;
+}
+
+.parks label {
+    margin-left: 2px;
 }
 
 .park {
@@ -128,6 +123,22 @@ hr {
     width: 100%;
 }
 
+.art input {
+    width: 150px;
+    line-height: 1.5em;
+}
 
 /* Styling for concert section */
 
+.concerts input {
+    width: 150px;
+    line-height: 1.5em;
+}
+
+
+/* Styling for restaurant section */
+
+.restaurants input {
+    width: 150px;
+    line-height: 1.5em;
+}
