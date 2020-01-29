@@ -111,7 +111,7 @@ const artSaveEventManager = {
     addSaveClickEventListener() {
         
         const save = document.querySelectorAll(".artResults__button")
-
+        
         for (let i=0; i < save.length; i++) {
             let button = save[i]
             const resultSectionContent = button.parentNode
@@ -127,9 +127,8 @@ const artSaveEventManager = {
             const itineraryDivContent = document.getElementById("itinerary__art")
             button.addEventListener("click", () => {
                     itineraryDivContent.innerHTML = 
-                    `<span><strong>Piece:</strong> ${artworkText}</span><br> 
-                    <span><strong>Artist:</strong> ${artistText}</span><br>
-                    <span><strong>Location:</strong> ${locationText}</span>`
+                    `<span><strong>Art:</strong> ${artworkText} at ${locationText}</span>`
+                    concertResultsDomManager.clearSearchResults();
             })
         }
     }

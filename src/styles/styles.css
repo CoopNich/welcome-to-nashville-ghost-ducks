@@ -1,3 +1,18 @@
+/* page styles */
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+/* Styling for itinerary */
+
+.itinerary {
+    border: 1px solid black;
+    margin-top: 3%;
+    padding-left: 5%;
+}
+
+
 /* Styling for park search */
 
 .featuresSelection {
@@ -49,10 +64,6 @@ hr {
     width: 100%;
 }
 
-#itinerary__art {
-    border: 1px solid blueviolet;
+
 /* Styling for concert section */
 
-.itinerary {
-    margin-top: 30px;
-}
