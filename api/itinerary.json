@@ -1,0 +1,10 @@
+{
+    "itinerary":
+        {
+          "id": 1,
+          "park": "Sample Park",
+          "restaurant": "Sample Restaurant",
+          "art": "Sample Art",
+          "concert": "Sample Concert"
+        }
+}

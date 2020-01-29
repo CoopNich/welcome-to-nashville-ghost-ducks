@@ -21,6 +21,7 @@ const concertResultManager = {
                     if (concertFeature.toLowerCase() == "help") {concertResultsDomManager.helpSearch()} else {
                     concertResultsDomManager.renderconcertResults(matching)
                     }
+                    input.value = " "
                 }
             });
         });
