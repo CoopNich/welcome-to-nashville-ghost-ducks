@@ -1,5 +1,8 @@
 const parksResultsDomManager = {
     parksFactory(park, index) {
+        // featuresFactory(object, value) {
+        //     return park.keys(object).find(key => object[key]=== value);
+        // },
         const address = park.mapped_location.human_address.split("\"")
         return `
         <div id="park-${index}" class="park">
@@ -47,12 +50,14 @@ const parksResultsDomManager = {
 
         saveParkEventManager.addSaveParkEventListeners();
     },
+
     clearSearchResults() {
         const container = document.querySelector(".searchResults");
         container.innerHTML = " ";
     }
 };
 
+// parksResultsDomManager.featuresFactory('Yes');
 
 
 
