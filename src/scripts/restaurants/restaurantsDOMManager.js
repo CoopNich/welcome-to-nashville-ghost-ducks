@@ -3,7 +3,7 @@ const restaurantResultsDomManager = {
     restaurantFactory(restaurant, index) {
         return `
         <div class="restaurant_results">
-            <h3 id="restaurant_name-${index}">Name: ${restaurant.restaurant.name}</h3>
+            <h3 id="restaurant_name-${index}">${restaurant.restaurant.name}</h3>
             <p id="restaurant_address-${index}">Address: ${restaurant.restaurant.location.address}</p>
             <button id="save_restaurant-${index}" class="restaurant-save_restaurant">Save</button>
         </div>
@@ -17,7 +17,6 @@ const restaurantResultsDomManager = {
         `;
     },
     renderRestaurantResults(restaurantsResponse) {
-        console.log(restaurantsResponse)
         const restaurants = restaurantsResponse.restaurants
         const container = document.querySelector(".searchResults");
         container.innerHTML = "";
