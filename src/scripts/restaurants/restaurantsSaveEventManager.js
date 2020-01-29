@@ -2,7 +2,7 @@ const saveRestaurantEventHandler = (event) => {
     const restaurantButtonId = event.target.id;
     const index = restaurantButtonId.split('-')[1];
 
-    const restaurantItinerary = document.querySelector(".itinerary__restaurant");
+    const restaurantItinerary = document.querySelector(".itinerary__restaurants");
 
     const restaurantName = document.getElementById(`restaurant_name-${index}`);
     const restaurantAddress = document.getElementById(`restaurant_address-${index}`);
