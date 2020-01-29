@@ -29,7 +29,12 @@ const parksResultsDomManager = {
         saveParkEventManager.removeSaveParkEventListeners();
 
         const container = document.querySelector(".searchResults");
-        container.innerHTML = "";
+
+        // const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+        // for (let i = 0; i < checkboxes.length; i++) {
+        //     checkboxes[i].reset();
+        // }
+        
         if (searchResults.length === 0) {
             container.innerHTML += this.noResults();
         } else {
