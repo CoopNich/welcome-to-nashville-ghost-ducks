@@ -17,7 +17,6 @@ const restaurantResultsDomManager = {
         `;
     },
     renderRestaurantResults(restaurantsResponse) {
-        console.log(restaurantsResponse)
         const restaurants = restaurantsResponse.restaurants
         const container = document.querySelector(".searchResults");
         container.innerHTML = "";
