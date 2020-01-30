@@ -1,9 +1,11 @@
 {
-  "itinerary": {
-    "id": 1,
-    "park": "",
-    "art": "",
-    "restaurant": "",
-    "concert": ""
+    "itinerary": {
+      "id": 1,
+      "park": " ",
+      "art": " ",
+      "restaurant": " ",
+      "concert": " "
+    }
   }
-}
+
+  

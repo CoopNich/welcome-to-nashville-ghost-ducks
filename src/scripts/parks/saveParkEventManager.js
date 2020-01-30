@@ -9,7 +9,8 @@ const saveParkEventHandler = (event) => {
     const parkNameText = parkName.textContent;
     const parkAddressText = parkAddress.textContent;
     const actualParkAddressText = parkAddressText.split(':')[1];
-    parkItinerary.innerHTML = `<strong>Park: </strong>${parkNameText} <br> ${actualParkAddressText}`;
+    const allParkText = `${parkNameText} - ${actualParkAddressText}`;
+    apiManager.putItineraryPark(allParkText);
     parksResultsDomManager.clearSearchResults();
 };
 
