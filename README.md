@@ -51,8 +51,9 @@ Users can search for parks, public art collections, restaurants, and concerts in
         }
     }
     ```
-    
-7. hs -o
+
+7. cd to src directory in your terminal again    
+8. hs -o
 ***
 ## USING THE APP
 
