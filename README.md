@@ -5,7 +5,11 @@ Users can search for parks, public art collections, restaurants, and concerts in
 ***
 
 ## Initialization Instructions
-1. Install [http-server](https://www.npmjs.com/package/http-server)
+1. Install [http-server](https://www.npmjs.com/package/http-server) & json-server
+    ```shell session
+    $ npm install -g json-server
+    ```
+    
 2. Select 'Clone or Download' in GitHub Repo
     
     ex.
@@ -27,7 +31,29 @@ Users can search for parks, public art collections, restaurants, and concerts in
         * Once you have it copy your key in your apiKeys.js file as: const concertKey = "YOUR_KEY_HERE"
 
 4. cd to src directory in your terminal
-5. hs -o
+5. Create an api directory and make a file 'itinerary.json'
+    ```shell session
+    $ cd ..
+    $ mkdir api
+    $ cd api
+    $ touch itinerary.json
+    ```
+
+6. Open itinerary.json and paste this into it:
+    ```json
+    {
+        "itinerary": {
+            "id": 1,
+            "park": " ",
+            "art": " ",
+            "restaurant": " ",
+            "concert": " "
+        }
+    }
+    ```
+
+7. cd to src directory in your terminal again    
+8. hs -o
 ***
 ## USING THE APP
 
@@ -52,6 +78,10 @@ To find restaurants in the Nashville area, use the search bar labeled "Search by
 You may search as broadly as regional categories (Italian, Japanese, etc.) or more specific types of food (Burgers, Ice Cream, etc.).
 
 ### Concert Functionality
+
+To find concerts you can attend in Nashvile, use the search bar labeled "Search Concerts by Genre" to find concerts based on the genre of music being played.
+
+Click the save button on any concert you would like to attend and it will be added to your itinerary.
 
 *****
 

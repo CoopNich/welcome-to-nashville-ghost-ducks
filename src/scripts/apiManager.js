@@ -37,7 +37,7 @@ const apiManager = {
         })
     },
 
-    //This put method is to put a concert(text) into the itinerary.json so that it is saved in the itinerary for all refreshes
+    //This put method is to put a park(text) into the itinerary.json
     putItineraryPark(text) {
      
         const jsonPromise = this.searchItinerary()
