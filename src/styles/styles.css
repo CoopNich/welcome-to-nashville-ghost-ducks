@@ -115,10 +115,15 @@ input {
     margin-top: 10px;
 }
 
-.park-save_park{
+.park-save_park {
+    padding-left: 3px;
     background-color: lightblue;
     font-weight: bold;
     border: 1px solid rgb(20, 77, 131);
+}
+
+.park p {
+    margin-bottom: 10px;
 }
 
 
