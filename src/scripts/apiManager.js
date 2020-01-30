@@ -36,6 +36,35 @@ const apiManager = {
             .then(json => this.printToDOM())
         })
     },
+
+    //This put method is to put a concert(text) into the itinerary.json so that it is saved in the itinerary for all refreshes
+    putItineraryPark(text) {
+     
+        const jsonPromise = this.searchItinerary()
+        jsonPromise.then(feature => {
+      
+            const park = feature.park
+            const art = feature.art
+            const rest = feature.restaurant
+ 
+        fetch(`http://localhost:8088/itinerary`, {
+            method: 'PUT',
+            body: JSON.stringify({
+        
+                "id": 1,
+                "park": park,
+                "art": art,
+                "restaurant": rest,
+                "concert": text
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+            .then(response => response.json())
+            .then(json => this.printToDOM())
+        })
+    },
     //This function prints out our itinerary on the DOM
     printToDOM() {
         const parks = document.querySelector(".itinerary__parks")
