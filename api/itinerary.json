@@ -1,9 +1,20 @@
 {
+<<<<<<< HEAD
   "itinerary": {
     "id": 1,
     "park": "",
     "art": "",
     "restaurant": "",
     "concert": ""
+=======
+    "itinerary": {
+      "id": 1,
+      "park": " ",
+      "art": " ",
+      "restaurant": " ",
+      "concert": " "
+    }
+>>>>>>> 51f676efea82a5d526910abf790682220ae16c82
   }
-}
+
+  
