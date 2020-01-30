@@ -47,6 +47,10 @@ Click 'Save' to add an art installation to your itinerary.
 
 ### Restaurant Functionality
 
+To find restaurants in the Nashville area, use the search bar labeled "Search by Cuisine" to find restaurants based on the type of food they serve. 
+
+You may search as broadly as regional categories (Italian, Japanese, etc.) or more specific types of food (Burgers, Ice Cream, etc.).
+
 ### Concert Functionality
 
 *****

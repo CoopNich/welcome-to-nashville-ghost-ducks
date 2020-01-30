@@ -21,6 +21,7 @@ h1 {
 
 h2 {
     text-transform: uppercase;
+    margin-bottom: 3%;
 }
 
 h3 {
@@ -49,7 +50,17 @@ h3 {
     padding: 1%;
 }
 
+.itinerary__table {
+    width: 100%;
+}
 
+.category {
+    width: 30%;
+}
+
+.savedInfo {
+    width: 70%;
+}
 /* Styling for park search */
 
 .parks {
@@ -132,20 +143,34 @@ hr {
 
 .art input {
     width: 150px;
-    line-height: 1.5em;
+    line-height: 2em;
+    margin-right: 1%;
 }
 
+.art {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
 /* Styling for concert section */
 
 .concerts input {
     width: 150px;
-    line-height: 1.5em;
+    line-height: 2em;
+    margin-right: 1%;
 }
 
+.concerts {
 
+}
 /* Styling for restaurant section */
 
 .restaurants input {
     width: 150px;
-    line-height: 1.5em;
+    line-height: 2em;
+    margin-right: 1%;
+}
+
+.restaurants {
+
 }
