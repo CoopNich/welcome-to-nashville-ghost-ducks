@@ -16,14 +16,18 @@ const artSaveEventManager = {
             const artistText = artist.textContent
             const locationText = location.textContent
 
+            const artHtml = `${artworkText} at ${locationText}`
+
             const itineraryDivContent = document.getElementById("itinerary__art")
             button.addEventListener("click", () => {
-                    itineraryDivContent.innerHTML = 
-                    `<table class="itinerary__table">
-                    <tr>
-                    <td class="category"><strong>Art</strong></td>
-                    <td class="savedInfo"> ${artworkText} at ${locationText}</td>
-                    </table>`
+                    apiManager.putItineraryArt(artHtml)
+
+                    // itineraryDivContent.innerHTML = 
+                    // `<table class="itinerary__table">
+                    // <tr>
+                    // <td class="category"><strong>Art</strong></td>
+                    // <td class="savedInfo"> ${artworkText} at ${locationText}</td>
+                    // </table>`
                     concertResultsDomManager.clearSearchResults();
             })
         }
