@@ -31,8 +31,28 @@ Users can search for parks, public art collections, restaurants, and concerts in
         * Once you have it copy your key in your apiKeys.js file as: const concertKey = "YOUR_KEY_HERE"
 
 4. cd to src directory in your terminal
-5. 
-6. hs -o
+5. Create an api directory and make a file 'itinerary.json'
+    ```shell session
+    $ cd ..
+    $ mkdir api
+    $ cd api
+    $ touch itinerary.json
+    ```
+
+6. Open itinerary.json and paste this into it:
+    ```shell session
+    {
+        "itinerary": {
+            "id": 1,
+            "park": " ",
+            "art": " ",
+            "restaurant": " ",
+            "concert": " "
+        }
+    }
+    ```
+    
+7. hs -o
 ***
 ## USING THE APP
 
