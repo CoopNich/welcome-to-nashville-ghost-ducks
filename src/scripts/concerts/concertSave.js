@@ -5,8 +5,9 @@ const saveConcertEventHandler = (evt) => {
     const targetConcert = document.getElementById(`concertText-${index}`);
     const concertText = targetConcert.textContent;
     const actualConcertText = concertText.split('.')[1];
-    itinerary.innerHTML = `<strong>Concert: </strong>${actualConcertText}`;
+    apiManager.putItineraryConcert(actualConcertText)
     concertResultsDomManager.clearSearchResults();
+    // apiManager.printToDOM()
 };
 
 const saveConcertEventManager = {
