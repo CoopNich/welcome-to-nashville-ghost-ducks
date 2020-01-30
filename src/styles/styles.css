@@ -114,6 +114,11 @@ input {
     border: 1px solid rgb(20, 77, 131);
 }
 
+
+
+
+
+
 /* Styling for art section */
 
 .artResults {
@@ -147,11 +152,12 @@ hr {
     margin-right: 1%;
 }
 
-.art {
-    display: flex;
-    align-items: center;
-    align-content: center;
-}
+
+
+
+
+
+
 /* Styling for concert section */
 
 .concerts input {
@@ -160,9 +166,7 @@ hr {
     margin-right: 1%;
 }
 
-.concerts {
 
-}
 /* Styling for restaurant section */
 
 .restaurants input {
@@ -171,6 +175,3 @@ hr {
     margin-right: 1%;
 }
 
-.restaurants {
-
-}
