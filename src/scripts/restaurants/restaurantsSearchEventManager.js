@@ -10,5 +10,13 @@ const restaurantResultManager = {
                  input.value = ""
             });
         });
+    
+        const input = document.getElementById("restaurant-search-criteria")
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("restaurant-search-button").click();
+            };
+        });
     }
 }

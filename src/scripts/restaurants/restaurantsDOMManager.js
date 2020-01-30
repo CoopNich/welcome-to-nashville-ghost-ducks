@@ -4,7 +4,7 @@ const restaurantResultsDomManager = {
         return `
         <div class="restaurant_results">
             <h3 id="restaurant_name-${index}">${restaurant.restaurant.name}</h3>
-            <p id="restaurant_address-${index}">Address: ${restaurant.restaurant.location.address}</p>
+            <p id="restaurant_address-${index}">Address:${restaurant.restaurant.location.address}</p>
             <button id="save_restaurant-${index}" class="restaurant-save_restaurant">Save</button>
         </div>
         `;
