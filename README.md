@@ -40,7 +40,7 @@ Users can search for parks, public art collections, restaurants, and concerts in
     ```
 
 6. Open itinerary.json and paste this into it:
-    ```shell session
+    ```json
     {
         "itinerary": {
             "id": 1,
