@@ -25,7 +25,7 @@ const restaurantResultsDomManager = {
             // restauraunts[i] represents current restaurant in the array being looped over
             // the following line plugs the current restaurant into the HTML factory and renders it to the DOM in the .searchResults container
           
-                container.innerHTML += this.restaurantFactory(restaurants[i])
+                container.innerHTML += this.restaurantFactory(restaurants[i], i)
                 
         }
         saveRestaurantEventManager.addSaveRestaurantEventListeners()
