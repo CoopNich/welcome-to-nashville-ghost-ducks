@@ -53,6 +53,10 @@ You may search as broadly as regional categories (Italian, Japanese, etc.) or mo
 
 ### Concert Functionality
 
+To find concerts you can attend in Nashvile, use the search bar labeled "Search Concerts by Genre" to find concerts based on the genre of music being played.
+
+Click the save button on any concert you would like to attend and it will be added to your itinerary.
+
 *****
 
 
