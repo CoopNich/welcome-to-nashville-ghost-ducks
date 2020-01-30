@@ -9,7 +9,7 @@ const saveRestaurantEventHandler = (event) => {
     const restaurantNameText = restaurantName.textContent;
     const restaurantAddressText = restaurantAddress.textContent;
     const actualRestaurantAddressText = restaurantAddressText.split(':')[1];
-    restaurantItinerary.innerHTML = `<strong>Restaurant:</strong>${restaurantNameText} <br> Address:${actualRestaurantAddressText}`;
+    apiManager.putItineraryRestaurant (`${restaurantNameText} <br> Address:${actualRestaurantAddressText}`) ;
     restaurantResultsDomManager.clearSearchResults();
 };
 
