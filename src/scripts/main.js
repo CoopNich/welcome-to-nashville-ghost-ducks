@@ -1,3 +1,3 @@
 concertResultManager.addSearchClickEventListener();
 concertResultManager.addClearClickEventListener();
-// apiManager.printToDOM();
+apiManager.printToDOM();
