@@ -1,10 +1,9 @@
 {
-    "itinerary":
-        {
-          "id": 1,
-          "park": "Sample Park",
-          "restaurant": "Sample Restaurant",
-          "art": "Sample Art",
-          "concert": "Sample Concert"
-        }
+  "itinerary": {
+    "id": 1,
+    "park": "Sample Park",
+    "art": "Sample Art",
+    "restaurant": "Sample Restaurant",
+    "concert": " Roger Waters: This Is Not a Drill is playing at Bridgestone Arena on 2020-08-18"
+  }
 }
