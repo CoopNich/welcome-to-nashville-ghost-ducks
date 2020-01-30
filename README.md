@@ -5,7 +5,11 @@ Users can search for parks, public art collections, restaurants, and concerts in
 ***
 
 ## Initialization Instructions
-1. Install [http-server](https://www.npmjs.com/package/http-server)
+1. Install [http-server](https://www.npmjs.com/package/http-server) & json-server
+    ```shell session
+    $ npm install -g json-server
+    ```
+    
 2. Select 'Clone or Download' in GitHub Repo
     
     ex.
@@ -27,7 +31,8 @@ Users can search for parks, public art collections, restaurants, and concerts in
         * Once you have it copy your key in your apiKeys.js file as: const concertKey = "YOUR_KEY_HERE"
 
 4. cd to src directory in your terminal
-5. hs -o
+5. 
+6. hs -o
 ***
 ## USING THE APP
 
