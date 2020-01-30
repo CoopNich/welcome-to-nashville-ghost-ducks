@@ -43,7 +43,7 @@ const apiManager = {
         const jsonPromise = this.searchItinerary()
         jsonPromise.then(feature => {
       
-            const park = feature.park
+            const concert = feature.concert
             const art = feature.art
             const rest = feature.restaurant
  
@@ -52,10 +52,10 @@ const apiManager = {
             body: JSON.stringify({
         
                 "id": 1,
-                "park": park,
+                "park": text,
                 "art": art,
                 "restaurant": rest,
-                "concert": text
+                "concert": concert
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"

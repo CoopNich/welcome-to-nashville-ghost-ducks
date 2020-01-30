@@ -10,7 +10,7 @@ const saveParkEventHandler = (event) => {
     const parkAddressText = parkAddress.textContent;
     const actualParkAddressText = parkAddressText.split(':')[1];
     const allParkText = `${parkNameText} - ${actualParkAddressText}`;
-    apiManager.putItineraryConcert(allParkText);
+    apiManager.putItineraryPark(allParkText);
     parksResultsDomManager.clearSearchResults();
 };
 
