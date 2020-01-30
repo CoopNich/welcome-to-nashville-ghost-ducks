@@ -93,6 +93,35 @@ const apiManager = {
             .then(json => this.printToDOM())
         })
     },
+
+    putItineraryArt(text) {
+     
+        const jsonPromise = this.searchItinerary()
+        jsonPromise.then(feature => {
+      
+            const concert = feature.concert
+            const park = feature.park
+            const restaurant = feature.restaurant
+ 
+        fetch(`http://localhost:8088/itinerary`, {
+            method: 'PUT',
+            body: JSON.stringify({
+        
+                "id": 1,
+                "park": park,
+                "art": text,
+                "restaurant": restaurant,
+                "concert": concert,
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+            .then(response => response.json())
+            .then(json => this.printToDOM())
+        })
+    },
+
     //This function prints out our itinerary on the DOM
     printToDOM() {
         const parks = document.querySelector(".itinerary__parks")
