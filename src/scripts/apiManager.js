@@ -65,15 +65,15 @@ const apiManager = {
             .then(json => this.printToDOM())
         })
     },
-// puts art text in the itinerary
-    putItineraryArt(text) {
+
+    putItineraryRestaurant(text) {
      
         const jsonPromise = this.searchItinerary()
         jsonPromise.then(feature => {
-            
-            const park = feature.park
+      
             const concert = feature.concert
-            const rest = feature.restaurant
+            const art = feature.art
+            const park = feature.park
  
         fetch(`http://localhost:8088/itinerary`, {
             method: 'PUT',
@@ -81,9 +81,9 @@ const apiManager = {
         
                 "id": 1,
                 "park": park,
-                "art": text,
-                "restaurant": rest,
-                "concert": concert
+                "art": art,
+                "restaurant": text,
+                "concert": concert,
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
