@@ -4,7 +4,13 @@ const parksApiManager = {
     searchParks(featuresSelected) {
         const multipleFeatures = featuresSelected.join("=Yes&");
         const featureUrl = parksApiBaseUrl + "?" + multipleFeatures + "=Yes"
-        return fetch(featureUrl)
+        if (featuresSelected.length > 0) {
+            return fetch(featureUrl)
             .then(resp => resp.json());
+        } else {
+            return fetch(parksApiBaseUrl)
+            .then(resp => resp.json());
+        }
+        
     }
 };

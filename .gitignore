@@ -1,4 +1,8 @@
 .DS_Store
 /src/scripts/apiKeys.js
+<<<<<<< HEAD
 /api/itinerary/json.
 
+=======
+/api/itinerary.json
+>>>>>>> master
