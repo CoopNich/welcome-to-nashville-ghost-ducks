@@ -19,7 +19,11 @@ const artSaveEventManager = {
             const itineraryDivContent = document.getElementById("itinerary__art")
             button.addEventListener("click", () => {
                     itineraryDivContent.innerHTML = 
-                    `<span><strong>Art:</strong> ${artworkText} at ${locationText}</span>`
+                    `<table class="itinerary__table">
+                    <tr>
+                    <td class="category"><strong>Art</strong></td>
+                    <td class="savedInfo"> ${artworkText} at ${locationText}</td>
+                    </table>`
                     concertResultsDomManager.clearSearchResults();
             })
         }
