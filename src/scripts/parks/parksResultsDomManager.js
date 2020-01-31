@@ -5,7 +5,7 @@ const parksResultsDomManager = {
         const specificFeaturesArray = [];
        
         if (`${park.nature_center}` === "Yes") {
-            specificFeaturesArray.push("nature_center")
+            specificFeaturesArray.push("Nature Center")
         }
         
         if (`${park.playground}` === "Yes") {
