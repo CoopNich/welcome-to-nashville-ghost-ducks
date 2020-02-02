@@ -141,11 +141,8 @@ const apiManager = {
         const clearButton = document.getElementById("clear-itinerary");
         clearButton.addEventListener("click", () => {
             const jsonPromise = this.searchItinerary()
-        jsonPromise.then(feature => {
+        jsonPromise.then(
       
-            const concert = feature.concert
-            const park = feature.park
-            const restaurant = feature.restaurant
  
         fetch(`http://localhost:8088/itinerary`, {
             method: 'PUT',
@@ -163,7 +160,7 @@ const apiManager = {
         })
             .then(response => response.json())
             .then(json => this.printToDOM())
-        })
+        )
         })
     }
 }
