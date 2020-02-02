@@ -4,109 +4,15 @@ const parksResultsDomManager = {
 
         const specificFeaturesArray = [];
        
-        if (`${park.nature_center}` === "Yes") {
-            specificFeaturesArray.push("Nature Center")
-        }
-        
-        if (`${park.playground}` === "Yes") {
-            specificFeaturesArray.push("Playground")
-        }
-        
-        if (`${park.picnic_shelters}` === "Yes") {
-            specificFeaturesArray.push("Picnic Shelters")
-        }
-        
-        if (`${park.dog_park}` === "Yes") {
-            specificFeaturesArray.push("Dog Park")
-        }
-        
-        if (`${park.baseball_fields}` === "Yes") {
-            specificFeaturesArray.push("Baseball Fields")
-        }
-        
-        if (`${park.basketball_courts}` === "Yes") {
-            specificFeaturesArray.push("Basketball Courts")
-        }
-        
-        if (`${park.volleyball}` === "Yes") {
-            specificFeaturesArray.push("Volleyball")
-        }
-        
-        if (`${park.soccer_fields}` === "Yes") {
-            specificFeaturesArray.push("Soccer Fields")
-        }
-        
-        if (`${park.football_multi_purpose_fields}` === "Yes") {
-            specificFeaturesArray.push("Football Field")
-        }
-        
-        if (`${park.tennis_court}` === "Yes") {
-            specificFeaturesArray.push("Tennis Court")
-        }
-        
-        if (`${park.disc_golf}` === "Yes") {
-            specificFeaturesArray.push("Disc Golf")
-        }
-        
-        if (`${park.skate_park}` === "Yes") {
-            specificFeaturesArray.push("Skate Park")
-        }
-        
-        if (`${park.swimming_pool}` === "Yes") {
-            specificFeaturesArray.push("Swimming Pool")
-        }
-        
-        if (`${park.spray_park}` === "Yes") {
-            specificFeaturesArray.push("Spray Park")
-        }
-        
-        if (`${park.golf_course}` === "Yes") {
-            specificFeaturesArray.push("Golf Course")
-        }
-        
-        if (`${park.walk_jog_paths}` === "Yes") {
-            specificFeaturesArray.push("Walking/Jogging Paths")
-        }
-        
-        if (`${park.hiking_trails}` === "Yes") {
-            specificFeaturesArray.push("Hiking Trails")
-        }
-        
-        if (`${park.horse_trails}` === "Yes") {
-            specificFeaturesArray.push("Horse Trails")
-        }
-        
-        if (`${park.mountain_bike_trails}` === "Yes") {
-            specificFeaturesArray.push("Mountain Bike Trails")
-        }
-        
-        if (`${park.boat_launch}` === "Yes") {
-            specificFeaturesArray.push("Boat Launch")
-        }
-        
-        if (`${park.camping_available_by_permit}` === "Yes") {
-            specificFeaturesArray.push("Camping")
-        }
-        
-        if (`${park.fishing_by_permit}` === "Yes") {
-            specificFeaturesArray.push("Fishing")
-        }
-        
-        if (`${park.lake}` === "Yes") {
-            specificFeaturesArray.push("Lake")
-        }
-        
-        if (`${park.canoe_launch}` === "Yes") {
-            specificFeaturesArray.push("Canoe Launch")
-        }
-        
-        if (`${park.community_garden}` === "Yes") {
-            specificFeaturesArray.push("Community Garden")
-        }
-        
-        if (`${park.historic_features}` === "Yes") {
-            specificFeaturesArray.push("Historic Features")
-        }
+        const features = [`${park.community_center}`, `${park.nature_center}`, `${park.playground}`, `${park.picnic_shelters}`, `${park.dog_park}`, `${park.baseball_fields}`, `${park.basketball_courts}`, `${park.volleyball}`, `${park.soccer_fields}`, `${park.football_multi_purpose_fields}`, `${park.tennis_courts}`, `${park.disc_golf}`, `${park.skate_park}`, `${park.swimming_pool}`, `${park.spray_park}`, `${park.golf_course}`, `${park.walk_jog_paths}`, `${park.hiking_trails}`, `${park.horse_trails}`, `${park.mountain_bike_trails}`, `${park.boat_launch}`, `${park.camping_available_by_permit}`, `${park.fishing_by_permit}`, `${park.lake}`, `${park.canoe_launch}`, `${park.community_garden}`, `${park.historic_features}`];
+
+        const featuresText = ["Community Center", "Nature Center", "Playground", "Picnic Shelters", "Dog Park", "Baseball Fields", "Basketball Courts", "Volleyball", "Soccer Fields", "Football Field", "Tennis Courts", "Disc Golf", "Skate Park", "Swimming Pool", "Spray Park", "Golf Course", "Walking/Jogging Paths", "Hiking Trails", "Horse Trails", "Mountain Bike Trails", "Boat Launch", "Camping", "Fishing", "Lake", "Canoe Launch", "Community Garden", "Historic Features"];
+
+        for (let i = 0; i < features.length; i++) {
+            if (features[i] === "Yes") {
+                specificFeaturesArray.push(featuresText[i])
+                }
+            }
 
         const uniqueFeatures = specificFeaturesArray.join(", ")
 
