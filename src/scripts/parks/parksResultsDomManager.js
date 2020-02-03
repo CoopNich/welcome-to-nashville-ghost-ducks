@@ -56,8 +56,8 @@ const parksResultsDomManager = {
         if (searchResults.length === 0) {
             container.innerHTML += this.noResults();
         } else {
-            searchResults.forEach(park => {
-                container.innerHTML += this.parksFactory(park);
+            searchResults.forEach((park,index) => {
+                container.innerHTML += this.parksFactory(park, index);
             });
         }
 
