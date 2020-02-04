@@ -135,5 +135,32 @@ const apiManager = {
             restaurants.innerHTML = `<strong>Restaurant:</strong> ${feature.restaurant}`
             concerts.innerHTML = `<strong>Concert:</strong> ${feature.concert}`
         })
+    },
+
+    addClearClickEventListener() {
+        const clearButton = document.getElementById("clear-itinerary");
+        clearButton.addEventListener("click", () => {
+            const jsonPromise = this.searchItinerary()
+        jsonPromise.then(
+      
+ 
+        fetch(`http://localhost:8088/itinerary`, {
+            method: 'PUT',
+            body: JSON.stringify({
+        
+                "id": 1,
+                park: " ",
+                art: " ",
+                restaurant: " ",
+                concert: " ",
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+            .then(response => response.json())
+            .then(json => this.printToDOM())
+        )
+        })
     }
 }
